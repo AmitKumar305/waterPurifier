@@ -41,14 +41,16 @@ const sendContactUsEmail = async ({
                 Bill Number: ${billNumber}
                 Subject: ${subject}
                 Issue: ${issue}
-            `,
-            attachments: [
+            `
+        };
+        if (file && fileName) {
+            mailOptions.attachments = [
                 {
                   filename: fileName,
                   content: file,
                 },
-            ],
-        };
+            ];
+        }
     }
 
     await transpoter.sendMail(mailOptions);
