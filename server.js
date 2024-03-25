@@ -20,7 +20,7 @@ const support = require('./controller/support');
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-	res.send('Server is running');
+	res.send('<h1>Server is running</h1>');
 });
 
 app.post('/api/contactUs', contactUs);
