@@ -32,6 +32,10 @@ app.post('/api/addProduct', AuthenticateAdmin, addProduct);
 app.post('/api/editProduct', AuthenticateAdmin, editProduct);
 app.post('/api/deleteProduct', AuthenticateAdmin, deleteProduct);
 app.get('/api/listProducts', listProducts);
+
+app.get('/', (req, res) => {
+	res.send('<h1>Server is running</h1>');
+});
 app.post('/api/contactUs', contactUs);
 app.post('/api/support', support);
 
