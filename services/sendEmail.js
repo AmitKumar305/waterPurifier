@@ -53,8 +53,9 @@ const sendContactUsEmail = async ({
                 ];
             }
         }
-        
+        console.time();
         transporter.sendMail(mailOptions);        
+        console.timeEnd();
     } catch (err) {
         console.log(err);
     }
